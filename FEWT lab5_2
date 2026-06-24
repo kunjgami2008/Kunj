@@ -1,0 +1,47 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script>
+			
+			a=Number(prompt("eneter no 1"));
+			b=Number(prompt("eneter no 2"));
+
+			c=prompt("enter your choice");
+
+			if(c == '+')
+			{
+				console.log('Addition',a + b);
+			}
+
+				else if(c == '-')
+				{
+					console.log('Substraction',a - b);
+				}
+
+				else if(c == '*')
+				{
+					console.log('Multiplicatin',a * b);
+				}
+
+				else if(c == '/')
+				{
+					console.log('Division',a / b);
+				}
+
+			else
+			{
+
+				console.log('Please enter valid vlue:');
+			}
+
+
+	</script>
+
+</body>
+</html>
