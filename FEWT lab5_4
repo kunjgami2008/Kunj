@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script>
+		
+		var s1= parseFloat(prompt("enter no.1 :"));
+		var s2= parseFloat(prompt("enter no.2 :"));
+		var s3= parseFloat(prompt("enter no.3 :"));
+		var s4= parseFloat(prompt("enter no.4 :"));
+		var s5= parseFloat(prompt("enter no.5 :"));
+
+		var total = s1 + s2 + s3 + s4 + s5;
+		var per = total / 5;
+		var grade;
+
+		if(s1>39 && s2>39 && s3>39 && s4>39 && s5>39)
+		{
+			alert("student is pass")
+
+			if(per > 90)
+			{
+				alert(grade = "A");
+			}
+			else if(per > 80 )
+			{
+				alert(grade = "B");
+			}
+			else if(per > 70 )
+			{
+				alert(grade = "C");
+			}
+			else if(per > 60 )
+			{
+				alert(grade = "D");
+			}
+			else if (per > 40)
+				alert(grade = "E");
+			else
+				alert(grade = "F");
+
+			alert("Percentage :", per + "%");
+			alert("Grade :", grade);
+		}
+
+		else
+		{
+			alert("result is : fail");
+			alert("Grade : F");
+
+		}
+
+	</script>
+
+
+</body>
+</html>
