@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kabaddi Pro - Player Registration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:ital,wght@0,600;0,700;0,800;1,800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#fcf9f8",
+                      "secondary-fixed": "#ffdbcb",
+                      "surface-container": "#f0eded",
+                      "on-secondary-fixed-variant": "#7a3000",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "outline": "#767683",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "surface-tint": "#4c56af",
+                      "error-container": "#ffdad6",
+                      "secondary-container": "#fd6c00",
+                      "on-primary-fixed": "#000767",
+                      "inverse-surface": "#303030",
+                      "surface-container-low": "#f6f3f2",
+                      "inverse-primary": "#bdc2ff",
+                      "surface-variant": "#e5e2e1",
+                      "on-primary-fixed-variant": "#343d96",
+                      "surface-container-high": "#eae7e7",
+                      "surface": "#fcf9f8",
+                      "on-background": "#1b1c1c",
+                      "on-secondary-container": "#562000",
+                      "secondary": "#9f4200",
+                      "on-surface-variant": "#454652",
+                      "on-primary-container": "#8690ee",
+                      "error": "#ba1a1a",
+                      "surface-container-highest": "#e5e2e1",
+                      "secondary-fixed-dim": "#ffb692",
+                      "surface-dim": "#dcd9d9",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-surface": "#1b1c1c",
+                      "on-error-container": "#93000a",
+                      "primary-fixed-dim": "#bdc2ff",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#000666",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#191b1c",
+                      "background": "#fcf9f8",
+                      "primary-container": "#1a237e",
+                      "primary-fixed": "#e0e0ff",
+                      "on-tertiary-container": "#969798",
+                      "tertiary-container": "#2e3030",
+                      "outline-variant": "#c6c5d4",
+                      "inverse-on-surface": "#f3f0ef",
+                      "on-secondary-fixed": "#341100",
+                      "on-error": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "lg": "40px",
+                      "md": "24px",
+                      "base": "8px",
+                      "xs": "4px",
+                      "sm": "12px",
+                      "xl": "64px",
+                      "margin-desktop": "48px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "display-lg": [
+                              "Montserrat"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .custom-input {
+            border: 1px solid #1a237e;
+            transition: all 0.2s ease-in-out;
+        }
+        .custom-input:focus {
+            border-color: #fd6c00;
+            border-width: 2px;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(253, 108, 0, 0.1);
+        }
+        .nav-active {
+            position: relative;
+        }
+        .nav-active::before {
+            content: '';
+            position: absolute;
+            left: -16px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 60%;
+            width: 4px;
+            background-color: #fd6c00;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-lg antialiased overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+<div class="flex h-screen overflow-hidden max-w-[1440px] mx-auto w-full">
+<!-- Sidebar Navigation (Desktop) -->
+<nav class="hidden md:flex flex-col w-64 bg-surface shadow-[4px_0_12px_rgba(26,35,126,0.05)] z-40 h-full py-md">
+<div class="px-md mb-xl">
+<h1 class="font-display-lg text-headline-md italic uppercase tracking-tighter text-primary">KABADDI PRO</h1>
+</div>
+<div class="flex flex-col gap-base px-sm flex-grow">
+<!-- Active Item -->
+<a class="flex items-center gap-sm px-4 py-3 bg-secondary-container text-on-secondary-container rounded-lg nav-active transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person_add</span>
+<span class="font-label-md text-label-md">Register</span>
+</a>
+<!-- Inactive Items -->
+<a class="flex items-center gap-sm px-4 py-3 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200 rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">account_circle</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+<a class="flex items-center gap-sm px-4 py-3 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200 rounded-lg group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">help</span>
+<span class="font-label-md text-label-md">Support</span>
+</a>
+</div>
+<div class="px-md mt-auto pt-md border-t border-outline-variant">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden border border-outline-variant">
+<span class="material-symbols-outlined text-outline">person</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Guest User</p>
+<p class="font-caption text-caption text-on-surface-variant">Log in</p>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto bg-surface-container-low">
+<!-- TopAppBar (Mobile only) -->
+<header class="md:hidden flex items-center justify-between px-margin-mobile h-16 w-full bg-surface border-b border-outline-variant sticky top-0 z-40">
+<button class="text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-display-lg text-headline-md italic uppercase tracking-tighter text-primary">KABADDI PRO</h1>
+<div class="w-10"></div> <!-- Spacer -->
+</header>
+<div class="p-margin-mobile md:p-margin-desktop max-w-5xl mx-auto pb-32 md:pb-margin-desktop">
+<div class="mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Player Registration</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Enter your details to join the professional league registry.</p>
+</div>
+<form class="space-y-md">
+<!-- Personal Profile Section -->
+<div class="bg-surface rounded-xl shadow-[0_4px_12px_rgba(26,35,126,0.04)] border border-outline-variant p-md">
+<div class="flex items-center gap-sm mb-md border-b border-outline-variant pb-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">badge</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Personal Profile</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant block" for="fullName">Full Name</label>
+<input class="w-full bg-surface custom-input rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline" id="fullName" placeholder="Enter your full name" type="text"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant block" for="dob">Date of Birth</label>
+<input class="w-full bg-surface custom-input rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface" id="dob" type="date"/>
+</div>
+<div class="space-y-xs md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface-variant block mb-sm">Gender</label>
+<div class="flex flex-wrap gap-4">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="text-secondary-container focus:ring-secondary-container w-5 h-5 border-outline custom-input" name="gender" type="radio" value="male"/>
+<span class="font-body-md text-body-md group-hover:text-primary transition-colors">Male</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="text-secondary-container focus:ring-secondary-container w-5 h-5 border-outline custom-input" name="gender" type="radio" value="female"/>
+<span class="font-body-md text-body-md group-hover:text-primary transition-colors">Female</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="text-secondary-container focus:ring-secondary-container w-5 h-5 border-outline custom-input" name="gender" type="radio" value="other"/>
+<span class="font-body-md text-body-md group-hover:text-primary transition-colors">Other</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Athletic Profile Section -->
+<div class="bg-surface rounded-xl shadow-[0_4px_12px_rgba(26,35,126,0.04)] border border-outline-variant p-md">
+<div class="flex items-center gap-sm mb-md border-b border-outline-variant pb-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">fitness_center</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Athletic Profile</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<div class="space-y-xs lg:col-span-3">
+<label class="font-label-md text-label-md text-on-surface-variant block mb-sm">Primary Position</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-sm">
+<label class="relative cursor-pointer">
+<input checked="" class="peer sr-only" name="position" type="radio" value="raider"/>
+<div class="p-4 rounded-lg border border-outline-variant hover:bg-surface-container-low peer-checked:border-secondary-container peer-checked:bg-secondary-fixed peer-checked:shadow-[0_0_0_1px_#fd6c00] transition-all flex flex-col items-center justify-center gap-2 text-center h-full">
+<span class="material-symbols-outlined text-on-surface-variant peer-checked:text-secondary-container">directions_run</span>
+<span class="font-label-md text-label-md text-on-surface peer-checked:text-on-secondary-fixed-variant">Raider</span>
+</div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="position" type="radio" value="defender"/>
+<div class="p-4 rounded-lg border border-outline-variant hover:bg-surface-container-low peer-checked:border-primary-container peer-checked:bg-primary-fixed peer-checked:shadow-[0_0_0_1px_#1a237e] transition-all flex flex-col items-center justify-center gap-2 text-center h-full">
+<span class="material-symbols-outlined text-on-surface-variant peer-checked:text-primary-container">shield</span>
+<span class="font-label-md text-label-md text-on-surface peer-checked:text-on-primary-fixed-variant">Defender</span>
+</div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="position" type="radio" value="all-rounder"/>
+<div class="p-4 rounded-lg border border-outline-variant hover:bg-surface-container-low peer-checked:border-outline peer-checked:bg-surface-container-high peer-checked:shadow-[0_0_0_1px_#767683] transition-all flex flex-col items-center justify-center gap-2 text-center h-full">
+<span class="material-symbols-outlined text-on-surface-variant peer-checked:text-on-surface">sync</span>
+<span class="font-label-md text-label-md text-on-surface peer-checked:text-on-surface">All-Rounder</span>
+</div>
+</label>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant block" for="weight">Weight (kg)</label>
+<div class="relative">
+<input class="w-full bg-surface custom-input rounded-lg pl-4 pr-12 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline" id="weight" placeholder="e.g. 85" type="number"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 font-body-md text-body-md text-outline">kg</span>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant block" for="height">Height (cm)</label>
+<div class="relative">
+<input class="w-full bg-surface custom-input rounded-lg pl-4 pr-12 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline" id="height" placeholder="e.g. 180" type="number"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 font-body-md text-body-md text-outline">cm</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Experience & Contact Section -->
+<div class="bg-surface rounded-xl shadow-[0_4px_12px_rgba(26,35,126,0.04)] border border-outline-variant p-md">
+<div class="flex items-center gap-sm mb-md border-b border-outline-variant pb-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">contact_mail</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Experience &amp; Contact</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant block" for="yearsActive">Years Active</label>
+<select class="w-full bg-surface custom-input rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23767683%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:20px] bg-no-repeat bg-[position:right_12px_center] pr-10" id="yearsActive">
+<option disabled="" selected="" value="">Select years</option>
+<option value="0-2">0-2 years</option>
+<option value="3-5">3-5 years</option>
+<option value="5-10">5-10 years</option>
+<option value="10+">10+ years</option>
+</select>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant block" for="currentClub">Current/Previous Club</label>
+<input class="w-full bg-surface custom-input rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline" id="currentClub" placeholder="Enter club name" type="text"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant block" for="phone">Phone Number</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[20px]">call</span>
+<input class="w-full bg-surface custom-input rounded-lg pl-12 pr-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline" id="phone" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant block" for="email">Email Address</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[20px]">mail</span>
+<input class="w-full bg-surface custom-input rounded-lg pl-12 pr-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline" id="email" placeholder="athlete@example.com" type="email"/>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row justify-end gap-sm pt-md">
+<button class="px-6 py-3 rounded-lg border-2 border-primary-container text-primary-container font-label-md text-label-md hover:bg-surface-container-low transition-colors text-center" type="button">
+                            Save Draft
+                        </button>
+<button class="px-8 py-3 rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md shadow-md hover:shadow-lg hover:bg-secondary transition-all active:scale-95 text-center flex items-center justify-center gap-2" type="submit">
+<span>Submit Registration</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</main>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center py-2 bg-surface shadow-[0_-4px_12px_rgba(26,35,126,0.08)]">
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-4 py-1 active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined">person_add</span>
+<span class="font-label-md text-label-md mt-1">Register</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-label-md text-label-md mt-1">Profile</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-md text-label-md mt-1">Support</span>
+</a>
+</nav>
+</div>
+</body></html>

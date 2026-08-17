@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coach Profile Details - ProKabaddi Coach Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#1b1c1c",
+                      "primary": "#000666",
+                      "error-container": "#ffdad6",
+                      "on-secondary": "#ffffff",
+                      "surface-variant": "#e5e2e1",
+                      "on-surface": "#1b1c1c",
+                      "outline": "#767683",
+                      "primary-fixed-dim": "#bdc2ff",
+                      "on-error-container": "#93000a",
+                      "error": "#ba1a1a",
+                      "surface-tint": "#4c56af",
+                      "inverse-primary": "#bdc2ff",
+                      "secondary-fixed": "#ffdbcb",
+                      "secondary": "#9f4200",
+                      "on-tertiary-container": "#969798",
+                      "surface-container-high": "#eae7e7",
+                      "tertiary": "#191b1c",
+                      "surface-container-highest": "#e5e2e1",
+                      "on-error": "#ffffff",
+                      "on-primary-container": "#8690ee",
+                      "on-secondary-container": "#562000",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-container": "#1a237e",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "secondary-fixed-dim": "#ffb692",
+                      "inverse-surface": "#303030",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#343d96",
+                      "tertiary-fixed": "#e2e2e2",
+                      "background": "#fcf9f8",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "surface": "#fcf9f8",
+                      "inverse-on-surface": "#f3f0ef",
+                      "on-secondary-fixed": "#341100",
+                      "tertiary-container": "#2e3030",
+                      "on-secondary-fixed-variant": "#7a3000",
+                      "surface-dim": "#dcd9d9",
+                      "surface-container": "#f0eded",
+                      "secondary-container": "#fd6c00",
+                      "outline-variant": "#c6c5d4",
+                      "on-surface-variant": "#454652",
+                      "surface-container-low": "#f6f3f2",
+                      "primary-fixed": "#e0e0ff",
+                      "on-primary-fixed": "#000767",
+                      "surface-bright": "#fcf9f8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "xs": "4px",
+                      "margin-mobile": "16px",
+                      "lg": "40px",
+                      "sm": "12px",
+                      "base": "8px",
+                      "xl": "64px",
+                      "md": "24px",
+                      "margin-desktop": "48px"
+              },
+              "fontFamily": {
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-[#F5F5F5] text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-md py-base max-w-[1440px] mx-auto bg-surface shadow-sm">
+<div class="flex items-center gap-md">
+<span class="font-headline-lg text-headline-lg font-black text-primary">ProKabaddi Coach Portal</span>
+</div>
+<nav class="hidden md:flex gap-md">
+<a class="text-on-surface-variant font-headline-md text-headline-md hover:bg-surface-container-low transition-colors active:scale-95 transition-transform px-base py-xs rounded" href="#">Dashboard</a>
+<a class="text-on-surface-variant font-headline-md text-headline-md hover:bg-surface-container-low transition-colors active:scale-95 transition-transform px-base py-xs rounded" href="#">Players</a>
+<a class="text-on-surface-variant font-headline-md text-headline-md hover:bg-surface-container-low transition-colors active:scale-95 transition-transform px-base py-xs rounded" href="#">Tactics</a>
+<a class="text-on-surface-variant font-headline-md text-headline-md hover:bg-surface-container-low transition-colors active:scale-95 transition-transform px-base py-xs rounded" href="#">History</a>
+</nav>
+<div class="flex items-center gap-sm">
+<div class="hidden md:flex relative text-on-surface-variant">
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2">search</span>
+<input class="pl-8 pr-4 py-1 rounded-full border border-outline bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary text-sm" placeholder="Search..." type="text"/>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container-low transition-colors active:scale-95 transition-transform p-xs rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-secondary border-b-2 border-secondary font-bold hover:bg-surface-container-low transition-colors active:scale-95 transition-transform p-xs rounded-full">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="bg-secondary text-on-secondary px-sm py-xs rounded-lg font-bold hover:bg-surface-container-low transition-colors active:scale-95 transition-transform ml-sm">
+                Save Squad
+            </button>
+<img alt="Coach Profile" class="w-8 h-8 rounded-full border-2 border-outline ml-xs object-cover" data-alt="A small, professional headshot of an athletic male coach with a neutral expression, wearing a navy blue collared shirt. Soft, even lighting, solid light grey background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw5trKN5x3vdl6Kug5wGBIAA0Hh5hBaCDqUje_9VVprzETlIQOtCmpm8ydg4rnk8oS-aPGw7sfbPU1tI184qjKHvmt1eZTcat4v2bb-O4BSBNdk5B6qAt1T06Git8FFninj97X8KePsk78uKfBx4XKk3uaivQGU5SapCG_vIZNbdYX7re4gsyWS6BP2BpSffO1LfHg8RdsVi3Ugifjy69YysVn5BywwOY85tCGdiHG_TlK-OUS26UQ"/>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col h-screen w-64 left-0 top-0 fixed bg-surface-container border-r border-outline-variant p-md gap-base pt-24 z-40">
+<div class="flex items-center gap-sm mb-lg">
+<img alt="League Logo" class="w-10 h-10 rounded" data-alt="A stylized, modern geometric logo of a lion's head in deep navy blue and vibrant orange, set against a stark white background. Sharp angles, dynamic feeling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBXSJeak3VVjFQxhsL_3gv6GsMAn7C6PR4XDDQ2hRepvrBgdWoDn1PEhQNtHGHsdrIG57F874_s0dhVAb_qZo4wh-rcKwIHydo6dGp8fdDi2GSQ0ioCrWiPFtPFYf4FU_ePpSIKibOwfBbjFKXG8BMTsj8Mw36g2XSWYX3OcFEBwZVsx2Qa1DUt-LSf3FiGoKpBiis7LjbURCzjF3v3w_LNtlCdIdVGk25NCfKG8_sZnXbT-PUDEJW"/>
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-primary">Dons Kabaddi</h2>
+<p class="font-caption text-caption text-on-surface-variant">Elite Division</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-xs">
+<a class="flex items-center gap-sm px-sm py-sm text-on-surface-variant hover:bg-surface-container-highest transition-all active:translate-x-1 rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Home
+            </a>
+<a class="flex items-center gap-sm px-sm py-sm text-on-surface-variant hover:bg-surface-container-highest transition-all active:translate-x-1 rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">groups</span>
+                Roster
+            </a>
+<a class="flex items-center gap-sm px-sm py-sm text-on-surface-variant hover:bg-surface-container-highest transition-all active:translate-x-1 rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">format_list_numbered</span>
+                Lineup Builder
+            </a>
+<a class="flex items-center gap-sm px-sm py-sm text-on-surface-variant hover:bg-surface-container-highest transition-all active:translate-x-1 rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+                Analytics
+            </a>
+<a class="flex items-center gap-sm px-sm py-sm text-on-surface-variant hover:bg-surface-container-highest transition-all active:translate-x-1 rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">person_add</span>
+                Draft
+            </a>
+</nav>
+<button class="bg-secondary text-on-secondary px-sm py-sm rounded-lg font-bold hover:bg-secondary-container transition-colors mb-lg mt-auto text-sm">
+            Quick Raid Analysis
+        </button>
+<div class="flex flex-col gap-xs border-t border-outline-variant pt-md">
+<a class="flex items-center gap-sm px-sm py-sm text-on-surface-variant hover:bg-surface-container-highest transition-all active:translate-x-1 rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">help</span>
+                Help
+            </a>
+<a class="flex items-center gap-sm px-sm py-sm text-on-surface-variant hover:bg-surface-container-highest transition-all active:translate-x-1 rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">logout</span>
+                Sign Out
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pt-24 lg:pl-64 min-h-screen">
+<div class="max-w-[1000px] mx-auto p-margin-mobile md:p-margin-desktop space-y-md">
+<!-- Page Header -->
+<div class="mb-lg">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-xs">Coach Profile Details</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage your professional coaching credentials and contact information.</p>
+</div>
+<form class="space-y-lg">
+<!-- Personal Information Section -->
+<section class="bg-surface rounded-lg border border-[#E0E0E0] p-md space-y-md">
+<h2 class="font-headline-md text-headline-md text-primary border-b border-outline-variant pb-xs mb-md">Personal Information</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md items-start">
+<!-- Photo Upload Area -->
+<div class="md:col-span-3 flex flex-col items-center gap-sm">
+<div class="w-32 h-32 rounded-full border-2 border-outline-variant overflow-hidden bg-surface-container relative group cursor-pointer">
+<img alt="Current Profile" class="w-full h-full object-cover" data-alt="A generic placeholder image showing a grey silhouette of a person's head and shoulders, indicating an area to upload a profile photo. The background is a slightly lighter grey." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIvqGR-PTRkt2kEgC8V0YoZB8qIakQYUxZfmcqZuiv3C30LqBfyD2hbhVywoKWaKoOsJ5UL_HwaaLk2glzJ0QO1ZOJ5uwp0VxXCwK9IMMAIQh71IM7NpR9I8hsy93dR7sKMN9EruSu3XP6PsR2ALHY3jT_0tGh6o2GQFQlnYAvT-fmtkS1iE0YIK4PKxMmD3OBwiRud5rAqhXNgUFo8TyIkdIMXYVwEPkeTbVc_EWxfVYBuRJgHiUk"/>
+<div class="absolute inset-0 bg-primary/50 hidden group-hover:flex items-center justify-center transition-all">
+<span class="material-symbols-outlined text-on-primary">photo_camera</span>
+</div>
+</div>
+<button class="text-secondary font-label-md text-label-md hover:underline" type="button">Change Photo</button>
+</div>
+<!-- Fields -->
+<div class="md:col-span-9 grid grid-cols-1 sm:grid-cols-2 gap-md">
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="fullName">Full Name</label>
+<input class="rounded px-sm py-sm border border-primary text-on-surface bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary focus:border-2 outline-none font-body-md text-body-md" id="fullName" type="text" value="Vikram Singh"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="dob">Date of Birth</label>
+<input class="rounded px-sm py-sm border border-primary text-on-surface bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary focus:border-2 outline-none font-body-md text-body-md" id="dob" type="date" value="1980-05-15"/>
+</div>
+<div class="flex flex-col gap-xs sm:col-span-2">
+<label class="font-label-md text-label-md text-on-surface" for="nationality">Nationality</label>
+<input class="rounded px-sm py-sm border border-primary text-on-surface bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary focus:border-2 outline-none font-body-md text-body-md" id="nationality" type="text" value="Indian"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Professional Credentials Section -->
+<section class="bg-surface rounded-lg border border-[#E0E0E0] p-md space-y-md">
+<h2 class="font-headline-md text-headline-md text-primary border-b border-outline-variant pb-xs mb-md">Professional Credentials</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="license">Coaching License Level</label>
+<select class="rounded px-sm py-sm border border-primary text-on-surface bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary focus:border-2 outline-none font-body-md text-body-md" id="license">
+<option>A-Level</option>
+<option selected="">Pro-Level</option>
+<option>Elite-Level</option>
+</select>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="experience">Years of Experience</label>
+<input class="rounded px-sm py-sm border border-primary text-on-surface bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary focus:border-2 outline-none font-body-md text-body-md" id="experience" type="number" value="12"/>
+</div>
+<div class="flex flex-col gap-xs sm:col-span-2">
+<label class="font-label-md text-label-md text-on-surface" for="skills">Specialized Skills (Comma separated)</label>
+<input class="rounded px-sm py-sm border border-primary text-on-surface bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary focus:border-2 outline-none font-body-md text-body-md" id="skills" type="text" value="Tactical Analysis, Defensive Structures, High-Pressure Management"/>
+</div>
+<div class="flex flex-col gap-xs sm:col-span-2">
+<label class="font-label-md text-label-md text-on-surface" for="teams">Previous Teams Managed</label>
+<textarea class="rounded px-sm py-sm border border-primary text-on-surface bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary focus:border-2 outline-none font-body-md text-body-md resize-y" id="teams" rows="3">Bengaluru Bulls (2018-2020)
+Puneri Paltan (Assistant, 2015-2017)</textarea>
+</div>
+</div>
+</section>
+<!-- Contact & Social Section -->
+<section class="bg-surface rounded-lg border border-[#E0E0E0] p-md space-y-md mb-xl">
+<h2 class="font-headline-md text-headline-md text-primary border-b border-outline-variant pb-xs mb-md">Contact &amp; Social</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="phone">Phone Number</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-base">call</span>
+<input class="w-full pl-8 rounded px-sm py-sm border border-primary text-on-surface bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary focus:border-2 outline-none font-body-md text-body-md" id="phone" type="tel" value="+91 98765 43210"/>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="email">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-base">mail</span>
+<input class="w-full pl-8 rounded px-sm py-sm border border-primary text-on-surface bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary focus:border-2 outline-none font-body-md text-body-md" id="email" type="email" value="v.singh@donskabaddi.com"/>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="linkedin">LinkedIn URL</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-base">link</span>
+<input class="w-full pl-8 rounded px-sm py-sm border border-primary text-on-surface bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary focus:border-2 outline-none font-body-md text-body-md" id="linkedin" placeholder="https://linkedin.com/in/..." type="url"/>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="twitter">Twitter/X Handle</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-base">alternate_email</span>
+<input class="w-full pl-8 rounded px-sm py-sm border border-primary text-on-surface bg-surface focus:border-secondary focus:ring-1 focus:ring-secondary focus:border-2 outline-none font-body-md text-body-md" id="twitter" placeholder="@username" type="text"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Actions -->
+<div class="flex flex-col-reverse sm:flex-row justify-end gap-sm pt-md border-t border-outline-variant">
+<button class="px-md py-sm font-label-md text-label-md text-primary border-2 border-primary rounded hover:bg-surface-container-low transition-colors text-center w-full sm:w-auto" type="button">
+                        Cancel
+                    </button>
+<button class="px-md py-sm font-label-md text-label-md bg-secondary text-on-secondary font-bold rounded hover:bg-secondary-container transition-colors shadow-sm text-center w-full sm:w-auto" type="submit">
+                        Save Profile
+                    </button>
+</div>
+</form>
+</div>
+</main>
+</body></html>
