@@ -112,7 +112,7 @@ public class Project_main
 		static Scanner obj=new Scanner(System.in);
 		
 		static BankUser [] users = new BankUser [100];
-		static int accountNumber = 2501000;
+		static int accountNumber = 300010;
 
 		static int count=0;
 		static int currentUser = -1;
